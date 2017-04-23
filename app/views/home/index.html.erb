@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Topics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dogs.each do |dog| %>
+      <tr>
+        <td><%= link_to dog.name, dog %></td>
+        <td><%= link_to 'Delete', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+binding.pry
+<%= link_to 'New Dog', new_dog_path %>
+
+
+
+<h1>Topics</h1>
+
+<ul>
+    <li><%= link_to "show users", users_path %></li>
+    <li><%= link_to "show dogs", dogs_path %></li>
+</ul>
